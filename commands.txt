@@ -1,0 +1,17 @@
+--- needed to be installed to be able to run project
+
+pip install PyMuPDF
+pip install chromadb sentence-transformers
+
+-- before running the docker container commands you need to peform all the code logic of phase 1 by running the main_runner.py
+python main_runner.py
+
+--- to build and run container
+docker-compose up --build
+
+--- to shut down and clean up
+ctrl + c 
+docker-compose down 
+
+--- when the terminal shows that the server is up at 0.0.0.0 
+open your browser and reach http://127.0.0.1:8000

@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+    rag_api:
+        build: .
+        container_name: cv_rag_backend
+        ports:
+            - "8000:8000"
+        environment:
+            - LLM_PROVIDER=remote
+            - GEMINI_API_KEY=${GEMINI_API_KEY}
+        volumes:
+            - ./cv_chroma_db:/code/cv_chroma_db
